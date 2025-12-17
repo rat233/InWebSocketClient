@@ -18,7 +18,7 @@ class INWEBSOCKETCLIENT_API UInWebSocketSession : public UBlueprintAsyncActionBa
 	GENERATED_BODY()
 	
 public:
-	UFUNCTION(BlueprintCallable, Category = InWebSocket)
+	UFUNCTION(BlueprintCallable, meta = (BlueprintInternalUseOnly = "true"), Category = InWebSocket)
 		static  UInWebSocketSession* CreateWebSocket(const FString& Url);
 
 	UFUNCTION(BlueprintCallable, Category = InWebSocket)
@@ -54,3 +54,4 @@ private:
 	TMap<FString, FString> m_Headers;
 	
 };
+
